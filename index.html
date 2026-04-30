@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sailor Flower Power Shop — Blooms Enchanted Just for You</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+
+  <!-- ── Navigation ── -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="script">✿</span> Sailor Flower Power Shop
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">Our Story</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-cart-btn" aria-label="Shopping cart">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img
+        src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=1600&q=85"
+        alt="Pink peonies hero"
+        class="hero-img"
+        id="hero-img">
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- petal rain layer -->
+    <div class="hero-petal-rain" id="petal-rain"></div>
+    <!-- sparkle layer -->
+    <div class="hero-sparkle-layer" id="sparkle-layer"></div>
+
+    <!-- botanical corner decor -->
+    <svg class="hero-corner hero-corner-tl" width="130" height="170" viewBox="0 0 130 170" fill="none" aria-hidden="true">
+      <path d="M65 10 Q82 45 74 85 Q62 128 56 160" stroke="#D9E0CE" stroke-width="1.4" fill="none"/>
+      <ellipse cx="82" cy="52" rx="19" ry="30" fill="#D9E0CE" opacity=".7" transform="rotate(-28 82 52)"/>
+      <ellipse cx="54" cy="76" rx="16" ry="23" fill="#F2C9CD" opacity=".6" transform="rotate(22 54 76)"/>
+      <ellipse cx="76" cy="100" rx="14" ry="20" fill="#D9E0CE" opacity=".55" transform="rotate(-14 76 100)"/>
+      <circle cx="68" cy="46" r="5" fill="#fff" opacity=".65"/>
+      <circle cx="52" cy="74" r="3.5" fill="#FFF8C8" opacity=".8"/>
+    </svg>
+    <svg class="hero-corner hero-corner-br" width="110" height="150" viewBox="0 0 110 150" fill="none" aria-hidden="true">
+      <path d="M45 8 Q64 46 54 88 Q42 128 48 142" stroke="#D9E0CE" stroke-width="1.4" fill="none"/>
+      <ellipse cx="60" cy="42" rx="17" ry="26" fill="#F2A6B0" opacity=".55" transform="rotate(24 60 42)"/>
+      <ellipse cx="40" cy="68" rx="15" ry="21" fill="#D9E0CE" opacity=".6" transform="rotate(-18 40 68)"/>
+      <circle cx="50" cy="40" r="4" fill="#fff" opacity=".65"/>
+    </svg>
+
+    <div class="hero-content">
+      <p class="hero-script">Blooms enchanted just for you</p>
+      <h1 class="hero-title">
+        Where Every<br>Petal <em>Tells a Story</em>
+      </h1>
+      <p class="hero-desc">
+        Handcrafted arrangements born from magic and botanicals — bouquets woven with intention, wrapped in wonder.
+      </p>
+      <div class="hero-actions">
+        <a href="shop.html" class="btn btn-primary btn-lg">Explore the Garden</a>
+        <button class="btn btn-ghost btn-lg" onclick="openQuiz()">Find My Bouquet ✦</button>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge">
+          <span class="hero-badge-icon">✿</span>
+          <span>Seasonal blooms</span>
+        </div>
+        <div class="hero-badge">
+          <span class="hero-badge-icon">◈</span>
+          <span>Same-day delivery</span>
+        </div>
+        <div class="hero-badge">
+          <span class="hero-badge-icon">✦</span>
+          <span>Custom arrangements</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Marquee ── -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Spring Collection ✦</span>
+      <span>Same-Day Delivery ✿</span>
+      <span>Handcrafted Bouquets ◈</span>
+      <span>Enchanted Arrangements ✦</span>
+      <span>Seasonal Blooms ✿</span>
+      <span>Spring Collection ✦</span>
+      <span>Same-Day Delivery ✿</span>
+      <span>Handcrafted Bouquets ◈</span>
+      <span>Enchanted Arrangements ✦</span>
+      <span>Seasonal Blooms ✿</span>
+    </div>
+  </div>
+
+  <!-- ── Featured Bouquets ── -->
+  <section class="section">
+    <div class="featured-header">
+      <div>
+        <p class="section-sub">This Season's Favourites</p>
+        <h2 class="section-title">Enchanted<br>Bouquets</h2>
+      </div>
+      <a href="shop.html" class="btn btn-ghost-rose">View all →</a>
+    </div>
+    <div class="product-grid">
+      <a href="bouquet.html" class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=600&q=80" alt="Garden Dream" loading="lazy">
+          <div class="product-overlay">
+            <span class="btn btn-primary btn-sm">Quick View</span>
+          </div>
+          <div class="product-badge">Bestseller</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Garden Dream</h3>
+          <p class="product-sub">Peonies & soft whites</p>
+          <div class="product-footer">
+            <span class="product-price">$65</span>
+            <button class="product-heart" aria-label="Add to wishlist">♡</button>
+          </div>
+        </div>
+      </a>
+
+      <a href="bouquet.html" class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?w=600&q=80" alt="Enchanted Rose" loading="lazy">
+          <div class="product-overlay">
+            <span class="btn btn-primary btn-sm">Quick View</span>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Enchanted Rose</h3>
+          <p class="product-sub">Garden roses & sage</p>
+          <div class="product-footer">
+            <span class="product-price">$55</span>
+            <button class="product-heart" aria-label="Add to wishlist">♡</button>
+          </div>
+        </div>
+      </a>
+
+      <a href="bouquet.html" class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1502977249166-824b3a8a4d6d?w=600&q=80" alt="Wildflower Meadow" loading="lazy">
+          <div class="product-overlay">
+            <span class="btn btn-primary btn-sm">Quick View</span>
+          </div>
+          <div class="product-badge new">New</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Wildflower Meadow</h3>
+          <p class="product-sub">Wild florals & lavender</p>
+          <div class="product-footer">
+            <span class="product-price">$48</span>
+            <button class="product-heart" aria-label="Add to wishlist">♡</button>
+          </div>
+        </div>
+      </a>
+
+      <a href="bouquet.html" class="product-card">
+        <div class="product-img-wrap">
+          <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600&q=80" alt="Tulip Twilight" loading="lazy">
+          <div class="product-overlay">
+            <span class="btn btn-primary btn-sm">Quick View</span>
+          </div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Tulip Twilight</h3>
+          <p class="product-sub">Pastel tulips & ferns</p>
+          <div class="product-footer">
+            <span class="product-price">$38</span>
+            <button class="product-heart" aria-label="Add to wishlist">♡</button>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── Lace divider ── -->
+  <div style="max-width:1320px; margin: 0 auto; padding: 0 48px;">
+    <div class="lace-divider">✿ our garden ✿</div>
+  </div>
+
+  <!-- ── Quiz Banner ── -->
+  <section class="quiz-section">
+    <div class="quiz-inner">
+      <div class="quiz-content">
+        <p class="section-sub">A little magic goes a long way</p>
+        <h2 class="section-title">Find Your<br>Perfect Bouquet ✦</h2>
+        <p class="quiz-desc">
+          Answer 3 quick questions and we'll match you with a bouquet that feels like it was grown just for you.
+        </p>
+        <button class="btn btn-primary btn-lg" onclick="openQuiz()">Take the Quiz →</button>
+      </div>
+      <div class="quiz-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=600&q=80"
+          alt="Pink roses bouquet"
+          class="quiz-img">
+        <div class="quiz-sparkle-ring"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About Snippet ── -->
+  <section class="section">
+    <div class="about-snippet-inner">
+      <div class="about-snippet-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1444065381814-865dc9da92c0?w=800&q=80"
+          alt="Florist arranging flowers"
+          class="about-snippet-img">
+        <div class="about-snippet-badge">
+          <span class="about-snippet-badge-num">12+</span>
+          <span class="about-snippet-badge-label">years of bloom magic</span>
+        </div>
+      </div>
+      <div class="about-snippet-text">
+        <p class="section-sub">Our Story</p>
+        <h2 class="section-title">Born from a<br>Love of Flowers</h2>
+        <div class="lace-divider" style="justify-content:flex-start; margin:18px 0 22px;">
+          <svg width="80" height="1" viewBox="0 0 80 1"><line x1="0" y1=".5" x2="80" y2=".5" stroke="#9EB199" stroke-width="1"/></svg>
+          <span style="font-family:var(--font-display); font-style:italic; color:var(--sage); font-size:17px;">crafted by hand</span>
+        </div>
+        <p class="section-body" style="margin-bottom:28px;">
+          Every arrangement is a spell — composed of petals, intention, and the belief that beauty has the power to change a moment. We source seasonal blooms with care and craft each bouquet by hand, one stem at a time.
+        </p>
+        <a href="about.html" class="btn btn-sage">Meet the garden</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Newsletter ── -->
+  <section class="newsletter-section">
+    <div class="newsletter-inner">
+      <p class="section-sub">Stay in bloom</p>
+      <h2 class="section-title">
+        Seasonal spells &amp; new arrivals,<br>straight to your heart
+      </h2>
+      <form class="newsletter-form" id="newsletter-form" onsubmit="handleNewsletter(event)">
+        <input type="email" placeholder="your@email.com" class="newsletter-input" required aria-label="Email address">
+        <button type="submit" class="btn btn-primary">Subscribe ✦</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          Sailor Flower Power Shop
+          <span class="footer-script">enchanted blooms</span>
+        </div>
+        <p class="footer-tagline">Bouquets woven with magic, crafted with love — delivered to your door.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Bouquets</a></li>
+          <li><a href="shop.html">Seasonal</a></li>
+          <li><a href="shop.html">Occasions</a></li>
+          <li><a href="bouquet.html">Customise</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Discover</h4>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="#">Care Guides</a></li>
+          <li><a href="#">Journal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sailor Flower Power Shop. Made with ✿ and magic.</span>
+      <span>Privacy · Terms</span>
+    </div>
+  </footer>
+
+  <!-- ── Chat Widget ── -->
+  <div class="chat-widget" id="chat-widget">
+    <div class="chat-panel" id="chat-panel">
+      <div class="chat-header">
+        <div class="chat-avatar">✿</div>
+        <div class="chat-header-info">
+          <h4>Bloom Guide</h4>
+          <p>Here to help ✦</p>
+        </div>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="chat-bubble bot">
+          Hello! I'm your Bloom Guide 🌸 I can help you find the perfect bouquet, answer care questions, or guide you through our seasonal collections. What can I do for you today?
+        </div>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" class="chat-input" id="chat-input" placeholder="Ask about flowers…" aria-label="Message">
+        <button class="chat-send" id="chat-send" aria-label="Send">
+          <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+        </button>
+      </div>
+    </div>
+    <button class="chat-toggle" id="chat-toggle" aria-label="Open chat">
+      <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    </button>
+  </div>
+
+  <!-- ── Quiz Modal ── -->
+  <div class="quiz-modal" id="quiz-modal" role="dialog" aria-modal="true" aria-label="Find your bouquet quiz">
+    <div class="quiz-backdrop" id="quiz-backdrop"></div>
+    <div class="quiz-box" id="quiz-box">
+      <button class="quiz-close" id="quiz-close" aria-label="Close quiz">×</button>
+      <div id="quiz-content">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

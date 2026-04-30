@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garden Dream — Sailor Flower Power Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+
+  <!-- ── Navigation ── -->
+  <nav class="nav scrolled" id="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="script">✿</span> Sailor Flower Power Shop
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="about.html">Our Story</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-cart-btn" aria-label="Shopping cart">
+        <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Detail Layout ── -->
+  <div class="detail-layout">
+
+    <!-- Gallery -->
+    <div class="detail-gallery">
+      <img
+        id="detail-main-img"
+        src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=900&q=85"
+        alt="Garden Dream bouquet"
+        class="detail-main-img">
+      <div class="detail-thumbs">
+        <img class="detail-thumb active"
+          src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=200&q=80"
+          alt="View 1" onclick="switchThumb(this,'https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=900&q=85')">
+        <img class="detail-thumb"
+          src="https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?w=200&q=80"
+          alt="View 2" onclick="switchThumb(this,'https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?w=900&q=85')">
+        <img class="detail-thumb"
+          src="https://images.unsplash.com/photo-1502977249166-824b3a8a4d6d?w=200&q=80"
+          alt="View 3" onclick="switchThumb(this,'https://images.unsplash.com/photo-1502977249166-824b3a8a4d6d?w=900&q=85')">
+        <img class="detail-thumb"
+          src="https://images.unsplash.com/photo-1520763185298-1b434c919102?w=200&q=80"
+          alt="View 4" onclick="switchThumb(this,'https://images.unsplash.com/photo-1520763185298-1b434c919102?w=900&q=85')">
+      </div>
+    </div>
+
+    <!-- Info + Customizer -->
+    <div class="detail-info">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="shop.html">Shop</a>
+        <span>/</span>
+        <span>Garden Dream</span>
+      </div>
+
+      <h1 class="detail-name">Garden Dream</h1>
+      <p class="detail-sub">Peonies &amp; soft whites</p>
+      <p class="detail-price" id="detail-price">$65</p>
+
+      <p class="detail-desc">
+        An arrangement as dreamy as a quiet afternoon in the garden — full, lush peonies in soft ivory and blush, layered with lily-of-the-valley sprigs and silvery eucalyptus. Each bouquet is assembled fresh the morning of delivery.
+      </p>
+
+      <hr class="detail-divider">
+
+      <!-- Customizer -->
+      <h3 class="customizer-title">Make it yours ✦</h3>
+
+      <div class="customizer-group">
+        <p class="customizer-label">Bouquet Size</p>
+        <div class="customizer-opts" id="size-opts">
+          <button class="cust-opt active" data-size="small" data-price="45" onclick="selectOpt(this,'size-opts'); updatePrice()">
+            Small · $45
+          </button>
+          <button class="cust-opt" data-size="medium" data-price="65" onclick="selectOpt(this,'size-opts'); updatePrice()">
+            Medium · $65
+          </button>
+          <button class="cust-opt" data-size="large" data-price="88" onclick="selectOpt(this,'size-opts'); updatePrice()">
+            Large · $88
+          </button>
+        </div>
+      </div>
+
+      <div class="customizer-group">
+        <p class="customizer-label">Wrap</p>
+        <div class="customizer-opts" id="wrap-opts">
+          <button class="cust-opt active" onclick="selectOpt(this,'wrap-opts')">Kraft paper</button>
+          <button class="cust-opt" onclick="selectOpt(this,'wrap-opts')">Ivory silk</button>
+          <button class="cust-opt" onclick="selectOpt(this,'wrap-opts')">Sage linen</button>
+          <button class="cust-opt" onclick="selectOpt(this,'wrap-opts')">Blush voile</button>
+        </div>
+      </div>
+
+      <div class="customizer-group">
+        <p class="customizer-label">Ribbon</p>
+        <div class="customizer-opts" id="ribbon-opts">
+          <button class="cust-opt active" onclick="selectOpt(this,'ribbon-opts')">
+            <span class="cust-swatch" style="background:#F2C9CD;"></span> Blush
+          </button>
+          <button class="cust-opt" onclick="selectOpt(this,'ribbon-opts')">
+            <span class="cust-swatch" style="background:#D9E0CE;"></span> Sage
+          </button>
+          <button class="cust-opt" onclick="selectOpt(this,'ribbon-opts')">
+            <span class="cust-swatch" style="background:#C9A86A;"></span> Gold
+          </button>
+          <button class="cust-opt" onclick="selectOpt(this,'ribbon-opts')">
+            <span class="cust-swatch" style="background:#fff; border:1.5px solid #ccc;"></span> Ivory
+          </button>
+          <button class="cust-opt" onclick="selectOpt(this,'ribbon-opts')">No ribbon</button>
+        </div>
+      </div>
+
+      <div class="customizer-group">
+        <p class="customizer-label">Add-ons</p>
+        <div class="customizer-opts" id="addon-opts">
+          <button class="cust-opt" onclick="toggleAddon(this,8)">
+            ✉️ Card message +$8
+          </button>
+          <button class="cust-opt" onclick="toggleAddon(this,12)">
+            🌿 Extra greenery +$12
+          </button>
+          <button class="cust-opt" onclick="toggleAddon(this,15)">
+            ✦ Sparkle stems +$15
+          </button>
+        </div>
+      </div>
+
+      <hr class="detail-divider">
+
+      <!-- Quantity + Add to Cart -->
+      <div style="display:flex; align-items:center; gap:20px; margin-bottom:16px; flex-wrap:wrap;">
+        <div class="detail-qty">
+          <button onclick="changeQty(-1)" aria-label="Decrease">−</button>
+          <span id="qty-display">1</span>
+          <button onclick="changeQty(1)" aria-label="Increase">+</button>
+        </div>
+        <button class="btn btn-primary" style="flex:1; min-width:200px; justify-content:center;" onclick="addToCart()">
+          Add to Cart — <span id="cart-price">$45</span>
+        </button>
+      </div>
+      <button class="btn btn-ghost-sage" style="width:100%; justify-content:center;">
+        ♡ Save to Wishlist
+      </button>
+
+      <hr class="detail-divider">
+
+      <!-- Details -->
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <details style="cursor:pointer;">
+          <summary style="font-weight:700; font-size:14px; padding:10px 0; list-style:none; display:flex; justify-content:space-between;">
+            Care Instructions <span>+</span>
+          </summary>
+          <p style="font-size:14px; color:var(--ink-soft); line-height:1.72; padding:8px 0 16px;">
+            Trim stems at a 45° angle, place in fresh cool water, and change water every 2 days. Keep away from direct sunlight and heat. Peonies last 5–7 days with proper care.
+          </p>
+        </details>
+        <details style="cursor:pointer;">
+          <summary style="font-weight:700; font-size:14px; padding:10px 0; list-style:none; display:flex; justify-content:space-between;">
+            Delivery Info <span>+</span>
+          </summary>
+          <p style="font-size:14px; color:var(--ink-soft); line-height:1.72; padding:8px 0 16px;">
+            Same-day delivery available for orders placed before 12pm. Next-day delivery for all other orders. Delivered in a water-safe box lined with seasonal blooms.
+          </p>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Related Bouquets ── -->
+  <section class="section" style="padding-top:0;">
+    <div class="lace-divider" style="margin-bottom:48px;">✿ you might also love ✿</div>
+    <div class="product-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));">
+      <a href="bouquet.html" class="product-card">
+        <div class="product-img-wrap" style="height:240px;">
+          <img src="https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?w=600&q=80" alt="Enchanted Rose" loading="lazy">
+          <div class="product-overlay"><span class="btn btn-primary btn-sm">View</span></div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Enchanted Rose</h3>
+          <p class="product-sub">Garden roses &amp; sage</p>
+          <div class="product-footer"><span class="product-price">$55</span><button class="product-heart">♡</button></div>
+        </div>
+      </a>
+      <a href="bouquet.html" class="product-card">
+        <div class="product-img-wrap" style="height:240px;">
+          <img src="https://images.unsplash.com/photo-1502977249166-824b3a8a4d6d?w=600&q=80" alt="Wildflower Meadow" loading="lazy">
+          <div class="product-overlay"><span class="btn btn-primary btn-sm">View</span></div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Wildflower Meadow</h3>
+          <p class="product-sub">Wild florals &amp; lavender</p>
+          <div class="product-footer"><span class="product-price">$48</span><button class="product-heart">♡</button></div>
+        </div>
+      </a>
+      <a href="bouquet.html" class="product-card">
+        <div class="product-img-wrap" style="height:240px;">
+          <img src="https://images.unsplash.com/photo-1469259943454-aa100abba749?w=600&q=80" alt="Lavender Bliss" loading="lazy">
+          <div class="product-overlay"><span class="btn btn-primary btn-sm">View</span></div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Lavender Bliss</h3>
+          <p class="product-sub">English lavender &amp; sage</p>
+          <div class="product-footer"><span class="product-price">$44</span><button class="product-heart">♡</button></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Sailor Flower Power Shop <span class="footer-script">enchanted blooms</span></div>
+        <p class="footer-tagline">Bouquets woven with magic, crafted with love — delivered to your door.</p>
+      </div>
+      <div class="footer-col"><h4>Shop</h4><ul>
+        <li><a href="shop.html">All Bouquets</a></li>
+        <li><a href="bouquet.html">Customise</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Discover</h4><ul>
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="#">Care Guides</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Connect</h4><ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Sailor Flower Power Shop. Made with ✿ and magic.</span>
+      <span>Privacy · Terms</span>
+    </div>
+  </footer>
+
+  <!-- ── Chat Widget ── -->
+  <div class="chat-widget" id="chat-widget">
+    <div class="chat-panel" id="chat-panel">
+      <div class="chat-header">
+        <div class="chat-avatar">✿</div>
+        <div class="chat-header-info">
+          <h4>Bloom Guide</h4>
+          <p>Here to help ✦</p>
+        </div>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="chat-bubble bot">
+          Hello! I'm your Bloom Guide 🌸 I can help you find the perfect bouquet, answer care questions, or guide you through our seasonal collections. What can I do for you today?
+        </div>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" class="chat-input" id="chat-input" placeholder="Ask about flowers…" aria-label="Message">
+        <button class="chat-send" id="chat-send" aria-label="Send">
+          <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+        </button>
+      </div>
+    </div>
+    <button class="chat-toggle" id="chat-toggle" aria-label="Open chat">
+      <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    /* Bouquet detail page logic */
+    let basePrice = 45;
+    let addonTotal = 0;
+    let qty = 1;
+
+    function updatePrice() {
+      const activeSize = document.querySelector('#size-opts .active');
+      basePrice = activeSize ? parseInt(activeSize.dataset.price) : 45;
+      const total = (basePrice + addonTotal) * qty;
+      document.getElementById('detail-price').textContent = '$' + total;
+      document.getElementById('cart-price').textContent = '$' + total;
+    }
+
+    function changeQty(d) {
+      qty = Math.max(1, qty + d);
+      document.getElementById('qty-display').textContent = qty;
+      updatePrice();
+    }
+
+    function selectOpt(el, groupId) {
+      document.querySelectorAll('#' + groupId + ' .cust-opt').forEach(b => b.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    function toggleAddon(el, price) {
+      el.classList.toggle('active');
+      addonTotal = 0;
+      document.querySelectorAll('#addon-opts .active').forEach(b => {
+        addonTotal += parseInt(b.dataset.addon || 0);
+      });
+      /* store per-button addon price */
+      el.dataset.addon = el.classList.contains('active') ? price : 0;
+      addonTotal = [...document.querySelectorAll('#addon-opts .active')]
+        .reduce((s, b) => s + parseInt(b.dataset.addon || 0), 0);
+      updatePrice();
+    }
+
+    function switchThumb(el, src) {
+      document.querySelectorAll('.detail-thumb').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      const main = document.getElementById('detail-main-img');
+      main.style.opacity = '0';
+      setTimeout(() => {
+        main.src = src;
+        main.style.opacity = '1';
+      }, 200);
+    }
+
+    function addToCart() {
+      const btn = document.querySelector('.detail-actions .btn-primary') ||
+                  document.querySelector('button[onclick="addToCart()"]');
+      const orig = btn ? btn.textContent : '';
+      if (btn) { btn.textContent = '✓ Added to cart!'; btn.style.background = 'var(--sage-deep)'; }
+      setTimeout(() => {
+        if (btn) { btn.textContent = orig; btn.style.background = ''; }
+      }, 2000);
+    }
+
+    document.getElementById('detail-main-img').style.transition = 'opacity .2s ease';
+    updatePrice();
+  </script>
+</body>
+</html>
