@@ -39,13 +39,23 @@ if (heroImg) {
    ──────────────────────────────────────────── */
 const petalRain = $('#petal-rain');
 if (petalRain) {
+  /* kawaii mix: petals, hearts, stars */
   const PETAL_SVG = (color, size) =>
     `<svg width="${size}" height="${Math.round(size * 1.4)}" viewBox="0 0 60 84" aria-hidden="true">` +
-    `<path d="M30 2 C50 18, 56 50, 30 82 C4 50, 10 18, 30 2 Z" fill="${color}" opacity="0.82"/></svg>`;
+    `<path d="M30 2 C50 18, 56 50, 30 82 C4 50, 10 18, 30 2 Z" fill="${color}" opacity="0.78"/></svg>`;
 
-  const palette = ['#FFB3D9', '#E91E8C', '#FFD700', '#C9A8E0', '#fff'];
+  const HEART_SVG = (color, size) =>
+    `<svg width="${size}" height="${size}" viewBox="0 0 24 24" aria-hidden="true">` +
+    `<path d="M12 21.6C12 21.6 2 14.4 2 7.8 2 5.1 4.1 3 6.8 3c1.5 0 2.9.7 3.8 1.8L12 6.2l1.4-1.4C14.3 3.7 15.7 3 17.2 3 19.9 3 22 5.1 22 7.8c0 6.6-10 13.8-10 13.8z" fill="${color}" opacity="0.85"/></svg>`;
 
-  for (let i = 0; i < 14; i++) {
+  const STAR_SVG = (color, size) =>
+    `<svg width="${size}" height="${size}" viewBox="0 0 24 24" aria-hidden="true">` +
+    `<path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6Z" fill="${color}" opacity="0.80"/></svg>`;
+
+  const palette = ['#FFB3D9', '#FF6AB0', '#FFE44D', '#DDB8F0', '#7ED8C8', '#fff'];
+  const shapes  = [PETAL_SVG, PETAL_SVG, PETAL_SVG, HEART_SVG, HEART_SVG, STAR_SVG];
+
+  for (let i = 0; i < 18; i++) {
     const el = document.createElement('div');
     el.className = 'petal-el';
     const left   = rng(0, i) * 100;
@@ -55,8 +65,9 @@ if (petalRain) {
     const dx     = (rng(4, i) - 0.5) * 100;
     const dr     = Math.round(rng(5, i) * 360);
     const color  = palette[Math.floor(rng(6, i) * palette.length)];
+    const shapeFn = shapes[Math.floor(rng(7, i) * shapes.length)];
     el.style.cssText = `left:${left}%; --dur:${dur}s; --delay:${delay}s; --dx:${dx}px; --dr:${dr}deg; animation-delay:${delay}s; animation-duration:${dur}s;`;
-    el.innerHTML = PETAL_SVG(color, size);
+    el.innerHTML = shapeFn(color, size);
     petalRain.appendChild(el);
   }
 }
@@ -70,7 +81,7 @@ if (sparkleLayer) {
     `<svg width="${size}" height="${size}" viewBox="0 0 24 24" aria-hidden="true">` +
     `<path d="M12 0 L13.5 9 L24 12 L13.5 15 L12 24 L10.5 15 L0 12 L10.5 9 Z" fill="${color}"/></svg>`;
 
-  const sparkleColors = ['rgba(255,215,0,.95)', 'rgba(255,179,217,.9)', 'rgba(200,160,224,.85)', 'rgba(255,255,255,.95)'];
+  const sparkleColors = ['rgba(255,228,77,.95)', 'rgba(255,142,192,.9)', 'rgba(126,216,200,.88)', 'rgba(221,184,240,.85)', 'rgba(255,255,255,.95)'];
 
   for (let i = 0; i < 18; i++) {
     const el = document.createElement('div');
