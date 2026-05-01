@@ -294,32 +294,20 @@
     </div>
   </footer>
 
-  <!-- ── Chat Widget ── -->
-  <div class="chat-widget" id="chat-widget">
-    <div class="chat-panel" id="chat-panel">
-      <div class="chat-header">
-        <div class="chat-avatar">✿</div>
-        <div class="chat-header-info">
-          <h4>Bloom Guide</h4>
-          <p>Here to help ✦</p>
-        </div>
-      </div>
-      <div class="chat-messages" id="chat-messages">
-        <div class="chat-bubble bot">
-          Hello! I'm your Bloom Guide 🌸 I can help you find the perfect bouquet, answer care questions, or guide you through our seasonal collections. What can I do for you today?
-        </div>
-      </div>
-      <div class="chat-input-row">
-        <input type="text" class="chat-input" id="chat-input" placeholder="Ask about flowers…" aria-label="Message">
-        <button class="chat-send" id="chat-send" aria-label="Send">
-          <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
-        </button>
-      </div>
-    </div>
-    <button class="chat-toggle" id="chat-toggle" aria-label="Open chat">
-      <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-    </button>
-  </div>
+  <!-- ── Watson Assistant Chat ── -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "76da8483-91d7-4ba9-a647-1d5b6c81d4c4",
+      region: "https://integrations.au-syd.assistant.watson.appdomain.cloud",
+      serviceInstanceID: "3f16e26c-b5b8-44f5-9fed-8a8712f2b3bf",
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
 
   <!-- ── Quiz Modal ── -->
   <div class="quiz-modal" id="quiz-modal" role="dialog" aria-modal="true" aria-label="Find your bouquet quiz">
