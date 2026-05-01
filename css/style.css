@@ -343,6 +343,8 @@ ul { list-style: none; }
   object-position: center 40%;
   transform: scale(1.04);
   transition: transform 8s ease-out;
+  /* dreamy anime bloom effect */
+  filter: saturate(1.65) brightness(1.12) contrast(1.04) hue-rotate(-15deg);
 }
 .hero-img.loaded { transform: scale(1); }
 /* Kawaii overlay: cotton candy pink → soft lavender → pale mint */
@@ -514,9 +516,36 @@ ul { list-style: none; }
 .product-img-wrap img {
   width: 100%; height: 100%;
   object-fit: cover;
-  transition: transform .5s ease;
+  transition: transform .5s ease, filter .4s ease;
+  /* anime-style: lift saturation, soften shadows, push toward pink-warm */
+  filter: saturate(1.55) brightness(1.1) contrast(1.06) hue-rotate(-10deg);
 }
-.product-card:hover .product-img-wrap img { transform: scale(1.06); }
+.product-card:hover .product-img-wrap img {
+  transform: scale(1.06);
+  filter: saturate(1.85) brightness(1.14) contrast(1.08) hue-rotate(-12deg);
+}
+/* pastel screen overlay — mimics anime cel shading highlight */
+.product-img-wrap::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 40% 28%, rgba(255,232,248,.22) 0%, transparent 55%),
+    linear-gradient(160deg, rgba(255,210,240,.12) 0%, rgba(180,160,255,.10) 100%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+/* animated sparkle in top-right corner */
+.product-img-wrap::before {
+  content: '✦';
+  position: absolute; top: 10px; right: 12px;
+  color: rgba(255,232,77,.95);
+  font-size: 18px;
+  z-index: 3;
+  animation: twinkle 2.8s ease-in-out infinite;
+  pointer-events: none;
+  text-shadow: 0 0 10px rgba(255,232,77,.7), 0 0 20px rgba(255,180,220,.5);
+}
 .product-overlay {
   position: absolute;
   inset: 0;
@@ -574,6 +603,15 @@ ul { list-style: none; }
 }
 .product-heart:hover { transform: scale(1.3) rotate(-8deg); color: var(--rose); }
 .product-heart.active { color: var(--rose); animation: heart-float 1.8s ease-in-out infinite; }
+
+/* stagger product card sparkles */
+.product-card:nth-child(2) .product-img-wrap::before { animation-delay: .8s; }
+.product-card:nth-child(3) .product-img-wrap::before { animation-delay: 1.6s; }
+.product-card:nth-child(4) .product-img-wrap::before { animation-delay: 2.2s; }
+.product-card:nth-child(5) .product-img-wrap::before { animation-delay: .4s; }
+.product-card:nth-child(6) .product-img-wrap::before { animation-delay: 1.2s; }
+.product-card:nth-child(7) .product-img-wrap::before { animation-delay: 2.6s; }
+.product-card:nth-child(8) .product-img-wrap::before { animation-delay: .6s; }
 
 /* ── Filter bar ── */
 .filter-bar {
@@ -653,13 +691,32 @@ ul { list-style: none; }
   display: flex;
   justify-content: center;
 }
+/* floating heart top-left of quiz image */
+.quiz-img-wrap::before {
+  content: '♥';
+  position: absolute; top: 24px; left: 8px;
+  font-size: 28px; color: var(--gold);
+  animation: heart-float 3s ease-in-out infinite;
+  text-shadow: 0 0 16px rgba(255,228,77,.8);
+  z-index: 5;
+}
+/* floating star bottom-right */
+.quiz-img-wrap::after {
+  content: '✦';
+  position: absolute; bottom: 40px; right: 8px;
+  font-size: 24px; color: var(--teal);
+  animation: heart-float 3.5s ease-in-out infinite .8s;
+  text-shadow: 0 0 14px rgba(126,216,200,.8);
+  z-index: 5;
+}
 .quiz-img {
   width: 380px;
   height: 460px;
   object-fit: cover;
   border-radius: 200px 200px 20px 20px;
-  box-shadow: 0 32px 80px rgba(0,0,0,.45), 0 0 60px rgba(233,30,140,.25);
+  box-shadow: 0 32px 80px rgba(40,8,72,.50), 0 0 60px rgba(255,106,176,.35), 0 0 100px rgba(126,216,200,.2);
   animation: float-soft 6s ease-in-out infinite;
+  filter: saturate(1.65) brightness(1.12) contrast(1.05) hue-rotate(-12deg);
 }
 .quiz-sparkle-ring {
   position: absolute;
@@ -777,12 +834,28 @@ ul { list-style: none; }
   gap: 80px;
   align-items: center;
 }
-.about-snippet-img-wrap { position: relative; }
+.about-snippet-img-wrap {
+  position: relative;
+}
+/* kawaii glow halo behind image */
+.about-snippet-img-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: calc(var(--radius) + 8px);
+  background: linear-gradient(135deg, var(--rose), var(--teal), var(--gold), var(--sage-deep));
+  opacity: .22;
+  filter: blur(18px);
+  z-index: 0;
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+.about-snippet-img-wrap img { position: relative; z-index: 1; }
 .about-snippet-img {
   width: 100%; height: 520px;
   object-fit: cover;
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
+  filter: saturate(1.6) brightness(1.1) hue-rotate(-10deg);
 }
 .about-snippet-badge {
   position: absolute;
@@ -962,6 +1035,7 @@ ul { list-style: none; }
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
   margin-bottom: 14px;
+  filter: saturate(1.6) brightness(1.1) hue-rotate(-10deg);
 }
 .detail-thumbs { display: flex; gap: 12px; }
 .detail-thumb {
@@ -1061,6 +1135,7 @@ ul { list-style: none; }
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: center 30%;
+  filter: saturate(1.6) brightness(1.1) hue-rotate(-12deg);
 }
 .about-hero-overlay {
   position: absolute; inset: 0;
@@ -1103,7 +1178,9 @@ ul { list-style: none; }
 .about-story-img {
   width: 100%; height: 500px;
   object-fit: cover; border-radius: var(--radius);
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow-soft), 0 0 40px rgba(255,106,176,.15), 0 0 80px rgba(126,216,200,.10);
+  filter: saturate(1.6) brightness(1.1) hue-rotate(-10deg);
+  border: 2px solid rgba(255,106,176,.15);
 }
 .about-story-text .section-body { margin: 20px 0 28px; }
 .about-team {
@@ -1129,7 +1206,24 @@ ul { list-style: none; }
   border: 1px solid rgba(233,30,140,.06);
 }
 .team-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
-.team-card img { width: 100%; height: 240px; object-fit: cover; }
+.team-card img {
+  width: 100%; height: 240px;
+  object-fit: cover; object-position: center top;
+  filter: saturate(1.5) brightness(1.1) contrast(1.05) hue-rotate(-10deg);
+}
+/* pastel anime portrait overlay */
+.team-card { position: relative; overflow: hidden; }
+.team-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 240px;
+  background:
+    radial-gradient(ellipse at 50% 25%, rgba(255,230,248,.20) 0%, transparent 60%),
+    linear-gradient(180deg, transparent 60%, rgba(240,224,255,.15) 100%);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
 .team-card-info { padding: 20px; text-align: left; }
 .team-card-name {
   font-family: var(--font-display);
