@@ -19,6 +19,9 @@
       <li><a href="about.html">Our Story</a></li>
     </ul>
     <div class="nav-actions">
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <button class="nav-cart-btn" aria-label="Shopping cart">
         <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
       </button>
@@ -75,16 +78,16 @@
     </svg>
 
     <div class="hero-content">
-      <p class="hero-script">Blooms enchanted just for you</p>
+      <p class="hero-script">Same-day delivery · From $38 ✦</p>
       <h1 class="hero-title">
-        Where Every<br>Petal <em>Tells a Story</em>
+        Bouquets That<br>Feel Like <em>Magic</em>
       </h1>
       <p class="hero-desc">
-        Handcrafted arrangements born from magic and botanicals — bouquets woven with intention, wrapped in wonder.
+        Fresh flowers, handpicked every morning and delivered to your door — custom-wrapped, seasonally sourced, and enchanting every time.
       </p>
       <div class="hero-actions">
-        <a href="shop.html" class="btn btn-primary btn-lg">Explore the Garden</a>
-        <button class="btn btn-ghost btn-lg" onclick="openQuiz()">Find My Bouquet ✦</button>
+        <a href="shop.html" class="btn btn-primary btn-lg">Shop from $38 ✦</a>
+        <button class="btn btn-ghost btn-lg" onclick="openQuiz()">Find My Bouquet →</button>
       </div>
       <div class="hero-badges">
         <div class="hero-badge">
@@ -116,6 +119,22 @@
       <span>Handcrafted Bouquets ◈</span>
       <span>Enchanted Arrangements ✦</span>
       <span>Seasonal Blooms ✿</span>
+    </div>
+  </div>
+
+  <!-- ── Trust Strip ── -->
+  <div class="trust-strip">
+    <div class="trust-strip-inner">
+      <div class="trust-item">
+        <span class="trust-stars">★★★★★</span>
+        <span><strong>4.9</strong> · 2,400+ happy customers</span>
+      </div>
+      <span class="trust-sep" aria-hidden="true">✦</span>
+      <div class="trust-item">⚡ Same-day delivery by 5pm</div>
+      <span class="trust-sep" aria-hidden="true">✦</span>
+      <div class="trust-item">🌱 Seasonal &amp; sustainable</div>
+      <span class="trust-sep" aria-hidden="true">✦</span>
+      <div class="trust-item">♻️ Compostable packaging</div>
     </div>
   </div>
 
@@ -206,6 +225,42 @@
     <div class="lace-divider">✿ our garden ✿</div>
   </div>
 
+  <!-- ── How It Works ── -->
+  <section class="how-it-works">
+    <div class="how-inner">
+      <p class="section-sub" style="text-align:center;">Simple &amp; magical</p>
+      <h2 class="section-title" style="text-align:center; margin-bottom:56px;">Three steps to enchantment ✦</h2>
+      <div class="steps-grid">
+
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <span class="step-icon-wrap">🌸</span>
+          <h3 class="step-title">Browse &amp; Customise</h3>
+          <p class="step-desc">Pick your bouquet, choose your size, wrap, ribbon &amp; add-ons. Every detail made to feel entirely yours.</p>
+          <div class="step-sparkle">✦</div>
+        </div>
+
+        <div class="step-card step-card--accent">
+          <div class="step-num">02</div>
+          <span class="step-icon-wrap">✂️</span>
+          <h3 class="step-title">We Arrange Fresh</h3>
+          <p class="step-desc">Your florist assembles each bouquet stem by stem the morning of delivery — never a day before. Always seasonal, always alive.</p>
+          <div class="step-sparkle">♥</div>
+        </div>
+
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <span class="step-icon-wrap">🚀</span>
+          <h3 class="step-title">Delivered with Love</h3>
+          <p class="step-desc">Wrapped in compostable packaging with a handwritten care card. Same-day delivery for orders placed before 12pm.</p>
+          <div class="step-sparkle">✿</div>
+        </div>
+
+      </div>
+      <p class="how-cta-note">Order before <strong>12pm</strong> today and your bouquet arrives <strong>this afternoon</strong> ⚡</p>
+    </div>
+  </section>
+
   <!-- ── Quiz Banner ── -->
   <section class="quiz-section">
     <div class="quiz-inner">
@@ -223,6 +278,96 @@
           alt="Pink roses bouquet"
           class="quiz-img">
         <div class="quiz-sparkle-ring"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Reviews ── -->
+  <section class="section reviews-section">
+    <p class="section-sub" style="text-align:center;">Real love notes</p>
+    <h2 class="section-title" style="text-align:center; margin-bottom:48px;">What our customers say ♥</h2>
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <span class="review-stars">★★★★★</span>
+        <p class="review-text">"I ordered the Garden Dream for my mum's birthday and she literally cried. The peonies were so fresh and full — nothing like a supermarket bouquet. Arrived before lunch, perfectly wrapped."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:var(--cream);">🌸</div>
+          <div>
+            <strong class="review-name">Sophie M.</strong>
+            <span class="review-date">Garden Dream · Medium</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card review-card--featured">
+        <div class="review-badge-featured">Most helpful ✦</div>
+        <span class="review-stars">★★★★★</span>
+        <p class="review-text">"Honestly the most beautiful bouquet I've ever received. The sage linen wrap and gold ribbon made it feel like a gift from a fairytale. Will never order flowers anywhere else."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:var(--sage-mist);">💜</div>
+          <div>
+            <strong class="review-name">Priya K.</strong>
+            <span class="review-date">Enchanted Rose · Large</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <span class="review-stars">★★★★★</span>
+        <p class="review-text">"Same-day delivery is no joke — ordered at 10am and it was at my door by 2pm. Still going strong a week later. The little care card was such a sweet touch."</p>
+        <div class="review-author">
+          <div class="review-avatar" style="background:var(--teal-soft);">🌿</div>
+          <div>
+            <strong class="review-name">James &amp; Leo</strong>
+            <span class="review-date">Wildflower Meadow · Small</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p style="text-align:center; margin-top:32px; font-size:14px; color:var(--muted);">
+      Rated <strong style="color:var(--ink);">4.9 out of 5</strong> from 2,400+ orders ★★★★★
+    </p>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="faq-section">
+    <div class="faq-inner">
+      <p class="section-sub" style="text-align:center;">Got questions?</p>
+      <h2 class="section-title" style="text-align:center; margin-bottom:48px;">We've got answers ✦</h2>
+      <div class="faq-list">
+
+        <details class="faq-item">
+          <summary class="faq-q">When is the cut-off for same-day delivery? <span class="faq-icon">+</span></summary>
+          <div class="faq-a">Orders placed before <strong>12pm (noon)</strong> qualify for same-day delivery, arriving by 5pm. After 12pm, we'll deliver the following morning between 9am–1pm. You'll receive a tracking update when your bouquet is on its way.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">How long will the flowers last? <span class="faq-icon">+</span></summary>
+          <div class="faq-a">Most bouquets last <strong>5–10 days</strong> with proper care. Every order includes a care card — trim stems at a 45° angle, use fresh cool water, change it every 2 days, and keep away from direct sunlight.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Can I add a personalised message? <span class="faq-icon">+</span></summary>
+          <div class="faq-a">Yes! Select the <strong>"Card message +$8"</strong> add-on when customising your bouquet. You'll enter your message at checkout and our florist will handwrite it on a botanical card included with the arrangement.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">What if my flowers arrive damaged? <span class="faq-icon">+</span></summary>
+          <div class="faq-a">We stand behind every bouquet with our <strong>Fresh Flower Guarantee</strong>. If anything arrives less than perfect, send us a photo within 24 hours and we'll replace the bouquet or issue a full refund — no questions asked.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Do you offer subscription or repeat orders? <span class="faq-icon">+</span></summary>
+          <div class="faq-a">Not yet — but it's coming soon! Subscribe to our newsletter to be first to know. In the meantime, email us and we can arrange a recurring order manually.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-q">Can I customise the flowers in a bouquet? <span class="faq-icon">+</span></summary>
+          <div class="faq-a">Each bouquet has a signature design, but you can fully customise the <strong>size, wrap, ribbon, and add-ons</strong> on every product page. For fully bespoke arrangements with specific flower requests, contact us via Instagram or email.</div>
+        </details>
+
       </div>
     </div>
   </section>
@@ -260,8 +405,11 @@
     <div class="newsletter-inner">
       <p class="section-sub">Stay in bloom</p>
       <h2 class="section-title">
-        Seasonal spells &amp; new arrivals,<br>straight to your heart
+        Get 10% off your first order ✦
       </h2>
+      <p style="font-size:15px; color:var(--ink-soft); margin-bottom:24px; max-width:400px; margin-left:auto; margin-right:auto;">
+        Plus seasonal drops, care tips &amp; early access to new bouquets. No spam — just blooms.
+      </p>
       <form class="newsletter-form" id="newsletter-form" onsubmit="handleNewsletter(event)">
         <input type="email" placeholder="your@email.com" class="newsletter-input" required aria-label="Email address">
         <button type="submit" class="btn btn-primary">Subscribe ✦</button>
@@ -310,6 +458,23 @@
       <span>Privacy · Terms</span>
     </div>
   </footer>
+
+  <!-- ── Mobile Nav ── -->
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+    <div class="mobile-nav-panel">
+      <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">×</button>
+      <a href="index.html" class="mobile-nav-logo"><span class="script">✿</span> Sailor Flower Power Shop</a>
+      <nav class="mobile-nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">Our Story</a>
+      </nav>
+      <div class="mobile-nav-cta">
+        <a href="shop.html" class="btn btn-primary" style="width:100%;justify-content:center;">Shop Bouquets ✦</a>
+      </div>
+    </div>
+  </div>
 
   <!-- ── Watson Assistant Chat ── -->
   <script>

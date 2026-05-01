@@ -19,6 +19,9 @@
       <li><a href="about.html">Our Story</a></li>
     </ul>
     <div class="nav-actions">
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
       <button class="nav-cart-btn" aria-label="Shopping cart">
         <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
       </button>
@@ -215,6 +218,23 @@
       <span>Privacy · Terms</span>
     </div>
   </footer>
+
+  <!-- ── Mobile Nav ── -->
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+    <div class="mobile-nav-panel">
+      <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">×</button>
+      <a href="index.html" class="mobile-nav-logo"><span class="script">✿</span> Sailor Flower Power Shop</a>
+      <nav class="mobile-nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">Our Story</a>
+      </nav>
+      <div class="mobile-nav-cta">
+        <a href="shop.html" class="btn btn-primary" style="width:100%;justify-content:center;">Shop Bouquets ✦</a>
+      </div>
+    </div>
+  </div>
 
   <!-- ── Watson Assistant Chat ── -->
   <script>

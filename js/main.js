@@ -423,3 +423,31 @@ window.handleNewsletter = function(e) {
     btn.disabled = false;
   }, 4000);
 };
+
+/* ────────────────────────────────────────────
+   MOBILE NAV
+   ──────────────────────────────────────────── */
+const hamburger   = $('#nav-hamburger');
+const mobileNav   = $('#mobile-nav');
+const mobileClose = $('#mobile-nav-close');
+const mobileBD    = $('#mobile-nav-backdrop');
+
+function openMobileNav() {
+  if (!mobileNav) return;
+  mobileNav.classList.add('open');
+  mobileNav.setAttribute('aria-hidden', 'false');
+  if (hamburger) { hamburger.classList.add('open'); hamburger.setAttribute('aria-expanded', 'true'); }
+  document.body.style.overflow = 'hidden';
+}
+function closeMobileNav() {
+  if (!mobileNav) return;
+  mobileNav.classList.remove('open');
+  mobileNav.setAttribute('aria-hidden', 'true');
+  if (hamburger) { hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded', 'false'); }
+  document.body.style.overflow = '';
+}
+
+if (hamburger)   hamburger.addEventListener('click', openMobileNav);
+if (mobileClose) mobileClose.addEventListener('click', closeMobileNav);
+if (mobileBD)    mobileBD.addEventListener('click', closeMobileNav);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileNav(); });
