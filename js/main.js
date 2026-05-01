@@ -43,7 +43,7 @@ if (petalRain) {
     `<svg width="${size}" height="${Math.round(size * 1.4)}" viewBox="0 0 60 84" aria-hidden="true">` +
     `<path d="M30 2 C50 18, 56 50, 30 82 C4 50, 10 18, 30 2 Z" fill="${color}" opacity="0.82"/></svg>`;
 
-  const palette = ['#F2C9CD', '#E8D0CE', '#F5EFE6', '#D9E0CE', '#fff'];
+  const palette = ['#FFB3D9', '#E91E8C', '#FFD700', '#C9A8E0', '#fff'];
 
   for (let i = 0; i < 14; i++) {
     const el = document.createElement('div');
@@ -70,7 +70,7 @@ if (sparkleLayer) {
     `<svg width="${size}" height="${size}" viewBox="0 0 24 24" aria-hidden="true">` +
     `<path d="M12 0 L13.5 9 L24 12 L13.5 15 L12 24 L10.5 15 L0 12 L10.5 9 Z" fill="${color}"/></svg>`;
 
-  const sparkleColors = ['rgba(255,248,200,.9)', 'rgba(242,201,205,.85)', 'rgba(201,168,106,.7)', 'rgba(255,255,255,.8)'];
+  const sparkleColors = ['rgba(255,215,0,.95)', 'rgba(255,179,217,.9)', 'rgba(200,160,224,.85)', 'rgba(255,255,255,.95)'];
 
   for (let i = 0; i < 18; i++) {
     const el = document.createElement('div');
