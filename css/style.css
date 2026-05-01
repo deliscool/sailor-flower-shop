@@ -347,16 +347,16 @@ ul { list-style: none; }
   filter: saturate(1.65) brightness(1.12) contrast(1.04) hue-rotate(-15deg);
 }
 .hero-img.loaded { transform: scale(1); }
-/* Kawaii overlay: cotton candy pink → soft lavender → pale mint */
+/* Soft white left (text legibility) → pastel fade right */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     110deg,
-    rgba(255,232,248,.96) 0%,
-    rgba(255,210,240,.84) 28%,
-    rgba(220,180,245,.38) 58%,
-    rgba(61,26,96,.18) 100%
+    rgba(255,255,255,.97) 0%,
+    rgba(255,250,255,.92) 22%,
+    rgba(240,220,255,.42) 52%,
+    rgba(61,26,96,.12) 100%
   );
 }
 .hero-petal-rain {
